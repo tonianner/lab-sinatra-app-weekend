@@ -1,0 +1,35 @@
+<h2>Add an Item</h2>
+
+<form class="form item col-xs-3" id="add-item" method="POST" action="/checklists">
+  <div class="form-group">
+    <label for="checklist[item_name]">Item Name: </label>
+    <input class="form-control" type="text" name="checklist[item_name]" placeholder="e.g. Start Dancing">
+  </div>
+
+  <div class="form-group">
+    <label for="checklist[importance]">Importance: </label>
+    <select class="form-control" type="text" name="checklist[importance]" value="<%= @checklist.importance %>">
+      <option value="Very High">Very High</option>
+      <option value="High" selected>High</option>
+      <option value="Medium">Medium</option>
+      <option value="Low">Low</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="checklist[location]">Location: </label>
+    <input class="form-control" type="text" name="checklist[location]" placeholder="e.g. Anywhere">
+  </div>
+
+  <div class="form-group">
+    <label for="checklist[person_involved]">Person Involved: </label>
+    <input class="form-control" type="text" name="checklist[person_involved]" placeholder="e.g. Just me">
+  </div>
+
+  <div class="form-group">
+    <label for="checklist[date_due]">Date Due: </label>
+    <input class="form-control" type="text" name="checklist[date_due]" placeholder="e.g. Never" id="datepicker" />
+  </div>
+
+  <button class="btn btn-primary" type="submit">Create Item</button>
+</form>

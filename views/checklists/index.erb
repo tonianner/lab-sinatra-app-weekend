@@ -1,0 +1,28 @@
+<h1>Your Checklists</h1>
+<hr>
+<ol>
+  <% @checklists.each do |checklist| %>
+    <li>
+      <a style="font-size: 20px" href="/checklists/<%= checklist.id %>/edit">
+        <strong><%= checklist.item_name.upcase %></strong>
+      </a>
+
+      <form style='display:inline;' method="POST" action="/checklists/<%= checklist.id %>/delete">
+        <button class="btn btn-warning btn-xs">Delete</button>
+      </form>
+
+
+      <ul>
+        <li><span style="color:#1064B2">Importance:</span> <%= checklist.importance.capitalize%></li>
+        <li><span style="color:#1064B2">Location:</span> <%= checklist.location.capitalize%></li>
+        <li><span style="color:#1064B2">Person Invloved:</span> <%= checklist.person_involved.capitalize%></li>
+        <li><span style="color:#1064B2">Date Due:</span> <%= checklist.date_due.capitalize%></li>
+      </ul>
+
+    <input type="submit" value="Completed">
+
+    </li>
+    <hr>
+  <% end %>
+</ol>
+

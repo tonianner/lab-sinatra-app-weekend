@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Checklist</title>
+  <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- See more at: http://webdesignandsuch.com/add-a-calendar-date-picker-to-a-form-with-jquery/#sthash.3yLDrgO9.dpuf -->
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav nav-pills">
+        <li role="presentation"><a href="/checklists">Your Checklists</a></li>
+        <li role="presentation"> <a href="/checklists/new">Add an Item</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <%= yield %>
+  </main>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <!-- See more at: http://webdesignandsuch.com/add-a-calendar-date-picker-to-a-form-with-jquery/#sthash.3yLDrgO9.dpuf -->
+  <script> $(document).ready(function() { $("#datepicker").datepicker(); }); </script>
+</body>
+</html>
